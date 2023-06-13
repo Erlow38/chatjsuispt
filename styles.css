@@ -8,6 +8,7 @@
   --user-color: #36363b;
   --menu-color: #2b2a2e;
   --text-color : #f2f2f2;
+  --icon-color: #f2f2f2;
 }
 
 * {
@@ -175,7 +176,6 @@ svg {
 .hero-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   width: 100%;
   flex-grow: 1; /* Permet au conteneur de héros de prendre autant d'espace vertical que possible */
@@ -202,16 +202,33 @@ svg {
 
 .message {
   display: flex;
-  justify-content: center;
-  padding: 20px 10px;
+  align-items: center;
+  padding: 20px 25%;
+}
+
+.message svg {
+  width: calc(1.5em + 1vw);
+  min-width: calc(1.5em + 1vw);
+  margin: 10px 20px 10px 10px;
+  padding: 8px;
+  border-radius: 50%;
 }
 
 .user-message {
   background-color: var(--user-color);
 }
 
+.user-message svg {
+  fill: var(--user-color);
+  background-color: var(--icon-color);
+}
+
 .bot-message {
   background-color: var(--background-color);
+}
+
+.bot-message svg {
+  background-color: var(--primary-color);
 }
 
 .research-container {
@@ -239,7 +256,7 @@ svg {
 }
 
 .input-container input[type="text"] {
-  width: 500px;
+  width: 50%;
   height: 50px;
   font-size: calc(0.8em + 0.1vw);
   border-radius: 20px 0 0 20px;
@@ -298,6 +315,15 @@ svg {
   }
   .chat-container {
     width: 100%;
+    max-height: calc(100vh - 263.094px);
+  }
+  .message {
+    display: flex;
+    padding: 20px 15%;
+  }
+  .research-container {
+    position: fixed;
+    bottom: 0;
   }
   .input-container input[type="text"] {
     width: 80%;
