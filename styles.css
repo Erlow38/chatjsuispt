@@ -314,8 +314,7 @@ svg {
     display: none;
   }
   .chat-container {
-    width: 100%;
-    max-height: calc(100vh - 263.094px);
+    max-height: calc(100vh - 300px);
   }
   .message {
     display: flex;
