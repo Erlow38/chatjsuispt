@@ -2,7 +2,7 @@
 
 :root {
   --primary-color: #5656d3;
-  --secondary-color: #493fd8;
+  --secondary-color: #5656d380;
   --background-color: #4a4a53;
   --input-color: #4f4f55;
   --user-color: #36363b;
@@ -22,7 +22,7 @@ body {
   padding: 0; /* Ajout d'un padding 0 pour éviter les écarts */
   display: flex;
   min-height: 100vh;
-  font-size: calc(0.4em + 0.5vw);
+  font-size: calc(0.8em + 0.1vw);
 }
 
 svg {
@@ -52,7 +52,7 @@ svg {
 }
 
 .mode-container svg {
-  width: calc(1em + 1vw);
+  width: calc(1.5em + 0.5vw);
   margin: 10px;
 }
 
@@ -111,7 +111,7 @@ svg {
 }
 
 .colors-container svg {
-  width: calc(1em + 1vw);
+  width: calc(1.5em + 0.5vw);
   margin: 10px;
 }
 
@@ -147,7 +147,7 @@ svg {
 }
 
 .settings-container svg {
-  width: calc(1em + 1vw);
+  width: calc(1.5em + 0.5vw);
 }
 
 .logo-container {
@@ -234,6 +234,7 @@ svg {
 .input-container input[type="text"] {
   width: 500px;
   height: 50px;
+  font-size: calc(0.8em + 0.1vw);
   border-radius: 20px 0 0 20px;
   max-width: 100%;
   padding: 5px;
@@ -262,8 +263,7 @@ svg {
 }
 
 .input-container button[type="submit"] svg {
-  width: 24px;
-  height: 24px;
+  width: calc(1.5em + 0.5vw);
 }
 
 @media (max-width: 768px) {
