@@ -3,12 +3,13 @@ let message_button = document.querySelector('.input-container button');
 let chat_container = document.querySelector('.chat-container');
 let suggestions_container = document.querySelector('.suggestion-container');
 let suggestions = document.querySelectorAll('.suggestion-container p');
+let delete_chat_button = document.querySelector('.delete-chat');
 
 function addMessage() {
     // Get the message from the input
     let message = message_input.value;
     if (message != '') {
-        // Hide the suggestions
+        // Delete the suggestions
         suggestions_container.style.display = 'none';
 
         // Disable the button and the input
@@ -75,3 +76,12 @@ for (let i = 0; i < suggestions.length; i++) {
         message_button.click();
     });
 }
+
+delete_chat_button.addEventListener('click', function() {
+    //supprimer les elements possedant la classe message
+    let messages = document.querySelectorAll('.message');
+    for (let i = 0; i < messages.length; i++) {
+        messages[i].remove();
+    }
+    suggestions_container.style.display = 'flex';
+});

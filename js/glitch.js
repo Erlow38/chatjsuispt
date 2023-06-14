@@ -1,4 +1,4 @@
-let parametres_btn = document.querySelector('.settings-container');
+let parametres_btn = document.querySelector('.terminator');
 let opacity = document.querySelector('.opacity');
 let logo = document.querySelector('.logo-container');
 let robot = document.querySelector('.event-robot');
