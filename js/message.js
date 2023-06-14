@@ -1,11 +1,16 @@
 let message_input = document.querySelector('.input-container input');
 let message_button = document.querySelector('.input-container button');
 let chat_container = document.querySelector('.chat-container');
+let suggestions_container = document.querySelector('.suggestion-container');
+let suggestions = document.querySelectorAll('.suggestion-container p');
 
 function addMessage() {
     // Get the message from the input
     let message = message_input.value;
     if (message != '') {
+        // Delete the suggestions
+        suggestions_container.style.display = 'none';
+
         // Disable the button and the input
         message_button.disabled = true;
         message_input.disabled = true;
@@ -52,7 +57,21 @@ message_input.addEventListener('keyup', function(event) {
         event.preventDefault();
         message_button.click();
     }
+
+    if (message_input.value != '') {
+        message_button.disabled = false;
+    } else {
+        message_button.disabled = true;
+    }
 });
 
 // Listen for the button click
 message_button.addEventListener('click', addMessage);
+
+// Listen for the suggestions click
+for (let i = 0; i < suggestions.length; i++) {
+    suggestions[i].addEventListener('click', function() {
+        message_input.value = suggestions[i].innerHTML;
+        message_button.click();
+    });
+}
