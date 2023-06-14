@@ -8,7 +8,7 @@ function addMessage() {
     // Get the message from the input
     let message = message_input.value;
     if (message != '') {
-        // Delete the suggestions
+        // Hide the suggestions
         suggestions_container.style.display = 'none';
 
         // Disable the button and the input
