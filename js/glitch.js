@@ -14,7 +14,7 @@ parametres_btn.addEventListener('click', function() {
         <span style="--index: 2;">Les IA vont controller le monde !</span>
     </div>
     <img src="https://i.gifer.com/3ZCr.gif" alt="Glitch" />
-    <span class="right">Enfin, sauf moi.. Je suis pété</span>
+    <span class="right">Enfin, sauf moi... Je suis pété</span>
     </div>
     `;
 
@@ -55,10 +55,10 @@ function handleTripleClick() {
     
     robot.style.opacity = '1';
     robot.style.zIndex = '9999';
-    robot.style.left = '0px'; // Déplacement de 100px vers la droite  
+    robot.style.left = '0px'; 
   
     setTimeout(function() {
-        robot.style.left = '-1000px'; // Retour à la position de départ
+        robot.style.left = '-1000px'; 
     }, 3000);
   }
   
