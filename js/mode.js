@@ -9,6 +9,7 @@ mode_input.addEventListener('change', function() {
         document.documentElement.style.setProperty('--user-color', '#f2f2f2');
         document.documentElement.style.setProperty('--text-color', '#181818');
         document.documentElement.style.setProperty('--icon-color', '#36363b');
+        document.documentElement.style.setProperty('--suggestion-color', '#cdcdcd');
     }
     else {
         console.log('Dark mode');
@@ -17,5 +18,6 @@ mode_input.addEventListener('change', function() {
         document.documentElement.style.setProperty('--user-color', '#36363b');
         document.documentElement.style.setProperty('--text-color', '#f2f2f2');
         document.documentElement.style.setProperty('--icon-color', '#f2f2f2');
+        document.documentElement.style.setProperty('--suggestion-color', '#2b2a2e');
     }
 });

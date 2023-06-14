@@ -9,6 +9,7 @@
   --menu-color: #2b2a2e;
   --text-color : #f2f2f2;
   --icon-color: #f2f2f2;
+  --suggestion-color: #2b2a2e;
 }
 
 * {
@@ -241,6 +242,36 @@ svg {
   background-color: var(--primary-color);
 }
 
+.suggestion-container {
+  display: flex;
+  position: relative;
+  border-radius: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 0;
+  margin: 0 30%;
+  background-color: var(--suggestion-color);
+}
+
+.suggestion-container p {
+  width: 30%;
+  font-size: 0.8em;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--background-color);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.suggestion-container p:hover {
+  color: #f2f2f2;
+  background-color: var(--primary-color);
+}
+
 .research-container {
   width: 100%;
   background-image: linear-gradient(
@@ -400,6 +431,10 @@ svg {
   }
   .logo-container svg {
     width: calc(1.5em + 2vw);
+  }
+  .suggestion-container {
+    /*a réactiver plus tard pour suggestion mobile*/
+    display: none;
   }
  .option-container {
     display: none;
