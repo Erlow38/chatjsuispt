@@ -41,7 +41,7 @@ function addMessage() {
                 message_input.disabled = false;
                 message_input.focus();
               }
-            }, 10); // Ajustez la vitesse de la frappe ici (en millisecondes)
+            }, 10); // Adjust the speed of the bot response
         }, 1000);
     }
 }
