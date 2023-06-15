@@ -131,7 +131,7 @@ svg {
   border: none;
   background-color: var(--menu-color);
   color: white;
-  padding: 5px;
+  padding: 5px 0;
   cursor: pointer;
 }
 
