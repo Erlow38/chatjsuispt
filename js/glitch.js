@@ -9,9 +9,9 @@ parametres_btn.addEventListener('click', function() {
     opacity.innerHTML = `
     <div class="glitch-container">
     <div class="stack" style="--stacks: 3;">
-        <span style="--index: 0;">Les IA vont controller le monde !</span>
-        <span style="--index: 1;">Les IA vont controller le monde !</span>
-        <span style="--index: 2;">Les IA vont controller le monde !</span>
+        <span style="--index: 0;">Les IA vont contrôler le monde !</span>
+        <span style="--index: 1;">Les IA vont contrôler le monde !</span>
+        <span style="--index: 2;">Les IA vont contrôler le monde !</span>
     </div>
     <img src="https://i.gifer.com/3ZCr.gif" alt="Glitch" />
     <span class="right">Enfin, sauf moi... Je suis pété</span>
