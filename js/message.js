@@ -29,8 +29,17 @@ function addMessage() {
 
         // Generate the bot response
         let response = 'Bienvenido a la página de contacto de la empresa. ¿En qué podemos ayudarte?';
-        let img = 'https://i.gifer.com/3ZCr.gif';
-            
+        let img;
+
+        if(message.toLowerCase().includes('canard') || message.toLowerCase().includes('duck') || message.toLowerCase().includes('coin coin') || message.toLowerCase().includes('coinc')) {
+            response = 'Si vous aimez les canards, allez voir ce merveilleux site développé par un de mes créateurs, Erlow : ';
+        } else if(message.toLowerCase().includes('tes créateurs') || message.toLowerCase().includes('tes créateur') || message.toLowerCase().includes('tes createurs') || message.toLowerCase().includes('tes createur')) {
+            response = 'Mes créateurs sont Erlow et Mei.';
+        } else if(message.toLowerCase().includes('test gif')) {
+            response = 'Voici un gif :';
+            img = 'https://media.giphy.com/media/3o7aD2X9Y5W5XxUdqo/giphy.gif';
+        }
+        
         setTimeout(function() {
             // Show the bot response in the chat
             let new_bot_div = document.createElement('div');
@@ -58,7 +67,7 @@ function addMessage() {
 
                 // Show the image in the chat
                 if (img) {
-                    new_bot_message.innerHTML += '<img src="' + img + '" alt="Image" width="1000">';
+                    new_bot_message.innerHTML += '<img src="' + img + '" alt="Image" width="500">';
                     chat_container.scrollTop = chat_container.scrollHeight;
                 }
               }
