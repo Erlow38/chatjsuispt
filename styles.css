@@ -221,13 +221,15 @@ a:hover {
 
 .message {
   display: flex;
-  align-items: center;
+  /*align-items: center;*/
   text-align: justify;
   padding: 20px 25%;
 }
 
 .message-content{
   display: flex;
+  word-break: break-all;
+  justify-content: center;
   flex-direction: column;
 }
 
