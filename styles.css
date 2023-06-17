@@ -32,6 +32,15 @@ svg {
   fill: var(--text-color);
 }
 
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+ text-decoration: underline;
+}
+
 .main-container {
   display: flex;
   justify-content: space-between;
