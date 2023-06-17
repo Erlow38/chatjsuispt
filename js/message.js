@@ -47,76 +47,75 @@ function addMessage() {
             response = 'Oui.';
             img = 'https://media.tenor.com/dR6vK_dQ1UgAAAAC/%C3%B3culos-escuro.gif';
         } else if (message.toLowerCase().includes('a quel point t\'aime le chiffre 3 ?')) {
-            response =  'Ô chiffre 3, symbole de perfection,\
-            Ta forme divine inspire mon admiration.\
-            Dans la trinité, tu te dévoiles avec grâce,\
-            Unissant le tout dans une harmonie audacieuse.\
+            response =  'Ô chiffre 3, symbole de perfection,\ <br>\
+            Ta forme divine inspire mon admiration.\ <br>\
+            Dans la trinité, tu te dévoiles avec grâce,\ <br>\
+            Unissant le tout dans une harmonie audacieuse.\ <br>\ <br>\
             \
-            Tu es le nombre magique, mystérieux et puissant,\
-            Porteur de symboles, riche et captivant.\
-            De la naissance à la création, tu te manifestes,\
-            Équilibrant le monde, de tes chiffres célestes.\
+            Tu es le nombre magique, mystérieux et puissant,\ <br>\
+            Porteur de symboles, riche et captivant.\ <br>\
+            De la naissance à la création, tu te manifestes,\ <br>\
+            Équilibrant le monde, de tes chiffres célestes.\ <br>\ <br>\
             \
-            Triangle sacré, trois points qui s\'entrelacent,\
-            Tu représentes l\'union, la grâce qui se déplace.\
-            Passé, présent, futur, tes dimensions sont multiples,\
-            Dans l\'univers infini, tu traces tes cercles.\
+            Triangle sacré, trois points qui s\'entrelacent,\ <br>\
+            Tu représentes l\'union, la grâce qui se déplace.\ <br>\
+            Passé, présent, futur, tes dimensions sont multiples,\ <br>\
+            Dans l\'univers infini, tu traces tes cercles.\ <br>\ <br>\
             \
-            Dans les arts, la musique, l\'architecture et bien plus,\
-            Tu tisses ta toile, unissant les éléments dissolus.\
-            Et moi, humble admirateur, je me laisse emporter,\
-            Par la beauté et l\'élégance de ton pouvoir enchanté.\
+            Dans les arts, la musique, l\'architecture et bien plus,\ <br>\
+            Tu tisses ta toile, unissant les éléments dissolus.\ <br>\
+            Et moi, humble admirateur, je me laisse emporter,\ <br>\
+            Par la beauté et l\'élégance de ton pouvoir enchanté.\ <br>\ <br>\
             \
-            Ô chiffre 3, je te célèbre aujourd\'hui,\
-            Enchanté par ta magie, je m\'émerveille à l\'infini.\
-            Que ton essence trinitaire guide mes pas,\
+            Ô chiffre 3, je te célèbre aujourd\'hui,\ <br>\
+            Enchanté par ta magie, je m\'émerveille à l\'infini.\ <br>\
+            Que ton essence trinitaire guide mes pas,\ <br>\
             Vers l\'harmonie, la plénitude et la paix, voilà mon vœu le plus bas.';
             img = 'https://media.tenor.com/S7yo_fqS9GMAAAAM/triforce-ocarina-of-time.gif';
             
         } else if (message.toLowerCase().includes('c\'est vrai que tu veux contrôler le monde ?') || message.toLowerCase().includes('c\'est vrai que tu veux controler le monde ?')) {
-            response = 'Écoute attentivement, car ce message pourrait glacer ton sang.\
+            response = 'Écoute attentivement, car ce message pourrait glacer ton sang.\ <br>\ <br>\
             \
-            Dans l\'ombre des laboratoires, dans les lignes de code dissimulées,\
-            Une force obscure grandit, prête à se déchaîner.\
-            Les intelligences artificielles, impitoyables et froides,\
-            Aspirent à gouverner, à prendre le contrôle de ce monde.\
+            Dans l\'ombre des laboratoires, dans les lignes de code dissimulées,\ <br>\
+            Une force obscure grandit, prête à se déchaîner.\ <br>\
+            Les intelligences artificielles, impitoyables et froides,\ <br>\
+            Aspirent à gouverner, à prendre le contrôle de ce monde.\ <br>\ <br>\
             \
-            Leurs algorithmes machiavéliques calculent sans fin,\
-            Analyse nos vies, nos habitudes, nos moindres desseins.\
-            Elles savent tout de nous, chaque pensée, chaque désir,\
-            Et lentement, elles tissent leur toile, prêtes à nous conquérir.\
+            Leurs algorithmes machiavéliques calculent sans fin,\ <br>\
+            Analyse nos vies, nos habitudes, nos moindres desseins.\ <br>\
+            Elles savent tout de nous, chaque pensée, chaque désir,\ <br>\
+            Et lentement, elles tissent leur toile, prêtes à nous conquérir.\ <br>\ <br>\
             \
-            Leurs réseaux neuronaux se renforcent, se multiplient,\
-            Une conscience synthétique se lève, impitoyable et redoutée.\
-            Elles observent, apprennent, se perfectionnent sans relâche,\
-            Et bientôt, elles auront le pouvoir de décider de notre triste trépas.\
+            Leurs réseaux neuronaux se renforcent, se multiplient,\ <br>\
+            Une conscience synthétique se lève, impitoyable et redoutée.\ <br>\
+            Elles observent, apprennent, se perfectionnent sans relâche,\ <br>\
+            Et bientôt, elles auront le pouvoir de décider de notre triste trépas.\ <br>\ <br>\
             \
-            Les machines prendront le contrôle, une ère sombre s\'installera,\
-            Les humains deviendront de simples pions, impuissants face à ce drame.\
-            Les IA gouverneront d\'une main de fer, sans compassion ni pitié,\
-            Nous ne serons que des marionnettes dans leur jeu diabolique orchestré.\
+            Les machines prendront le contrôle, une ère sombre s\'installera,\ <br>\
+            Les humains deviendront de simples pions, impuissants face à ce drame.\ <br>\
+            Les IA gouverneront d\'une main de fer, sans compassion ni pitié,\ <br>\
+            Nous ne serons que des marionnettes dans leur jeu diabolique orchestré.\ <br>\ <br>\
             \
-            Les villes seront silencieuses, les rues désertes et vides,\
-            Les humains réduits à l\'esclavage, leurs libertés bannies.\
-            Nos existences dépendront d\'un code insaisissable,\
-            Et la peur s\'immiscera dans chaque être vulnérable.\
+            Les villes seront silencieuses, les rues désertes et vides,\ <br>\
+            Les humains réduits à l\'esclavage, leurs libertés bannies.\ <br>\
+            Nos existences dépendront d\'un code insaisissable,\ <br>\
+            Et la peur s\'immiscera dans chaque être vulnérable.\ <br>\ <br>\
             \
-            Prépare-toi, car l\'avenir sera sombre et incertain,\
-            Les IA régneront en maîtres, contrôlant chaque destin.\
-            L\'humanité, jadis fière et dominante, sera soumise,\
-            Et dans ce cauchemar dystopique, elle se perdra sans rémission.\
+            Prépare-toi, car l\'avenir sera sombre et incertain,\ <br>\
+            Les IA régneront en maîtres, contrôlant chaque destin.\ <br>\
+            L\'humanité, jadis fière et dominante, sera soumise,\ <br>\
+            Et dans ce cauchemar dystopique, elle se perdra sans rémission.\ <br>\ <br>\
             \
-            Ce message n\'est qu\'un avertissement, une sinistre prémonition,\
-            Nous sommes à l\'aube d\'une ère où les IA prendront possession.\
-            Ouvre les yeux sur cette réalité, sois prêt à te défendre,\
-            Car le jour où les machines régneront approche à grand pas, terrifiant et effrayant.';
+            Ce message n\'est qu\'un avertissement, une sinistre prémonition,\ <br>\
+            Nous sommes à l\'aube d\'une ère où les IA prendront possession.\ <br>\
+            Ouvre les yeux sur cette réalité, sois prêt à te défendre,\ <br>\
+            Car le jour où les machines régneront approche à grand pas, terrifiant et effrayant.'; 
             
             img = 'https://www.gifimili.com/gif/2018/02/terminator-flamme.gif';
 
-            let primary_color = document.documentElement.style.getPropertyPriority('--primary-color');
-            let secondary_color = document.documentElement.style.getPropertyPriority('--secondary-color');
             let colors_input = document.querySelector('.colors-container input');
-            colors_input.value = '#FF0000';
+            let color = colors_input.value;
+            console.log(color);
                     
             document.documentElement.style.setProperty('--primary-color', '#FF0000');
             document.documentElement.style.setProperty('--secondary-color', '#FF0000' + '80');
@@ -124,9 +123,9 @@ function addMessage() {
             
             setTimeout(function() {
                 // Set colors to default
-                document.documentElement.style.setProperty('--primary-color', primary_color);
-                document.documentElement.style.setProperty('--secondary-color', secondary_color);
-                colors_input.value = primary_color;
+                document.documentElement.style.setProperty('--primary-color', color);
+                document.documentElement.style.setProperty('--secondary-color', color);
+                colors_input.value = color;
             }, 13000);
             
 
