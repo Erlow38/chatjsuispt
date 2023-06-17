@@ -4,6 +4,7 @@ let chat_container = document.querySelector('.chat-container');
 let suggestions_container = document.querySelector('.suggestion-container');
 let suggestions = document.querySelectorAll('.suggestion-container p');
 let delete_chat_button = document.querySelector('.delete-chat');
+let isWriting = false;
 
 function addMessage() {
     // Get the message from the input
@@ -13,9 +14,10 @@ function addMessage() {
         suggestions_container.style.display = 'none';
 
         // Disable the button and the input
+        
+        isWriting = true;
         message_button.disabled = true;
         message_input.disabled = true;
-        delete_chat_button.disabled = true;
 
         // Show the message in the chat
         let new_user_message = document.createElement('div');
@@ -114,19 +116,20 @@ function addMessage() {
             
             img = 'https://www.gifimili.com/gif/2018/02/terminator-flamme.gif';
 
-            let primary_color = document.documentElement.style.getPropertyPriority('--primary-color');
-            let secondary_color = document.documentElement.style.getPropertyPriority('--secondary-color');
+            let primary_color = document.documentElement.style.getPropertyValue('--primary-color');
+            let secondary_color = document.documentElement.style.getPropertyValue('--secondary-color');
             let colors_input = document.querySelector('.colors-container input');
-            colors_input.value = '#FF0000';
-                    
+            
             document.documentElement.style.setProperty('--primary-color', '#FF0000');
             document.documentElement.style.setProperty('--secondary-color', '#FF0000' + '80');
-
+            colors_input.value = '#FF0000';
+            
             setTimeout(function() {
                 document.documentElement.style.setProperty('--primary-color', primary_color);
                 document.documentElement.style.setProperty('--secondary-color', secondary_color);
                 colors_input.value = primary_color;
             }, 13000);
+            
 
         } else if (message.toLowerCase().includes('salut ! comment ça va ?')) {
             response = 'Salut ! C\'est une super journée !';
@@ -156,9 +159,9 @@ function addMessage() {
                 // After the response is shown
                 clearInterval(timer);
       
+                isWriting = false;
                 message_button.disabled = false;
                 message_input.disabled = false;
-                delete_chat_button.disabled = false;
                 message_input.focus();
 
                 // Show the image in the chat
@@ -199,11 +202,14 @@ for (let i = 0; i < suggestions.length; i++) {
 }
 
 // Listen for the delete chat button click
-delete_chat_button.addEventListener('click', function() {
-    //supprimer les elements possedant la classe message
-    let messages = document.querySelectorAll('.message');
-    for (let i = 0; i < messages.length; i++) {
-        messages[i].remove();
+delete_chat_button.addEventListener('click', delete_chat);
+
+function delete_chat() {
+    if (isWriting == false) {
+        let messages = document.querySelectorAll('.message');
+        for (let i = 0; i < messages.length; i++) {
+            messages[i].remove();
+        }
+        suggestions_container.style.display = 'flex';
     }
-    suggestions_container.style.display = 'flex';
-});
+}
