@@ -40,7 +40,7 @@ function addMessage() {
             response = 'Pour donner une classe à un élément HTML, vous pouvez utiliser la méthode classList.add() sur la variable qui contient l\'élément HTML. Dans les parenthèses, vous pouvez mettre le nom de la classe que vous voulez ajouter.';
         } else if(message.toLowerCase().includes('comment faire une transition en css')) {
             response = 'Pour faire une transition en CSS, vous pouvez utiliser la propriété transition sur la classe de l\'élément HTML que vous voulez animer. Dans les parenthèses, vous pouvez mettre le nom de la propriété que vous voulez animer, la durée de l\'animation et le type de transition.';
-        } else if(message.toLowerCase().includes('t\'aime terminator ?')) {
+        } else if(message.toLowerCase().includes('t\'aimes terminator ?')) {
             response = 'Oui.';
             img = 'https://media.tenor.com/dR6vK_dQ1UgAAAAC/%C3%B3culos-escuro.gif';
         } else if (message.toLowerCase().includes('a quel point t\'aime le chiffre 3 ?')) {
@@ -142,6 +142,8 @@ function addMessage() {
             new_bot_div.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill: rgba(242, 242, 242, 1);"><path d="M21.928 11.607c-.202-.488-.635-.605-.928-.633V8c0-1.103-.897-2-2-2h-6V4.61c.305-.274.5-.668.5-1.11a1.5 1.5 0 0 0-3 0c0 .442.195.836.5 1.11V6H5c-1.103 0-2 .897-2 2v2.997l-.082.006A1 1 0 0 0 1.99 12v2a1 1 0 0 0 1 1H3v5c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5a1 1 0 0 0 1-1v-1.938a1.006 1.006 0 0 0-.072-.455zM5 20V8h14l.001 3.996L19 12v2l.001.005.001 5.995H5z"></path><ellipse cx="8.5" cy="12" rx="1.5" ry="2"></ellipse><ellipse cx="15.5" cy="12" rx="1.5" ry="2"></ellipse><path d="M8 16h8v2H8z"></path></svg>';
             let new_bot_message = document.createElement('div');
             new_bot_message.classList.add('message-content');
+            let new_bot_text = document.createElement('div');
+            new_bot_message.appendChild(new_bot_text);
             new_bot_div.appendChild(new_bot_message);
             chat_container.appendChild(new_bot_div);
 
@@ -158,16 +160,16 @@ function addMessage() {
                         // Find the closing tag of the link
                         closing_tag_index = response.substring(i + 1).indexOf('</a>') + i + 1;
                         // Add the link
-                        new_bot_message.innerHTML += response.substring(i, closing_tag_index + 4);
+                        new_bot_text.innerHTML += response.substring(i, closing_tag_index + 4);
                         i = closing_tag_index + 4;
                     } else {
                         // Add the tag
-                        new_bot_message.innerHTML += response.substring(i, closing_tag_index + 1);
+                        new_bot_text.innerHTML += response.substring(i, closing_tag_index + 1);
                         i = closing_tag_index + 1;
                     }
                 } else {
                     // Add the character
-                    new_bot_message.innerHTML += response.charAt(i);
+                    new_bot_text.innerHTML += response.charAt(i);
                     chat_container.scrollTop = chat_container.scrollHeight;
                     i++;
                 }
