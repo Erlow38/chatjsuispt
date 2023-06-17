@@ -217,6 +217,15 @@ svg {
   padding: 20px 25%;
 }
 
+.message-content{
+  display: flex;
+  flex-direction: column;
+}
+
+.message-content img {
+  margin-top: 10px;
+}
+
 .message svg {
   width: calc(1.5em + 1vw);
   min-width: calc(1.5em + 1vw);
