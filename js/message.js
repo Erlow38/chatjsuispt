@@ -38,6 +38,102 @@ function addMessage() {
         } else if(message.toLowerCase().includes('test gif')) {
             response = 'Voici un gif :';
             img = 'https://media.giphy.com/media/3o7aD2X9Y5W5XxUdqo/giphy.gif';
+        } else if(message.toLowerCase().includes('comment faire un eventlistener en javascript ?')) {
+            response = 'Pour créer un EventListener en JavaScript, vous pouvez utiliser la méthode addEventListener() sur la variable qui contient l\'élément HTML. Dans les parenthèses, vous pouvez mettre le nom de l\'événement que vous voulez écouter et une fonction qui sera exécutée lorsque l\'événement sera déclenché.';
+        } else if(message.toLowerCase().includes('comment donner une classe à un élément html')) {
+            response = 'Pour donner une classe à un élément HTML, vous pouvez utiliser la méthode classList.add() sur la variable qui contient l\'élément HTML. Dans les parenthèses, vous pouvez mettre le nom de la classe que vous voulez ajouter.';
+        } else if(message.toLowerCase().includes('comment faire une transition en css')) {
+            response = 'Pour faire une transition en CSS, vous pouvez utiliser la propriété transition sur la classe de l\'élément HTML que vous voulez animer. Dans les parenthèses, vous pouvez mettre le nom de la propriété que vous voulez animer, la durée de l\'animation et le type de transition.';
+        } else if(message.toLowerCase().includes('t\'aime terminator ?')) {
+            response = 'Oui.';
+            img = 'https://media.tenor.com/dR6vK_dQ1UgAAAAC/%C3%B3culos-escuro.gif';
+        } else if (message.toLowerCase().includes('a quel point t\'aime le chiffre 3 ?')) {
+            response =  'Ô chiffre 3, symbole de perfection,\
+            Ta forme divine inspire mon admiration.\
+            Dans la trinité, tu te dévoiles avec grâce,\
+            Unissant le tout dans une harmonie audacieuse.\
+            \
+            Tu es le nombre magique, mystérieux et puissant,\
+            Porteur de symboles, riche et captivant.\
+            De la naissance à la création, tu te manifestes,\
+            Équilibrant le monde, de tes chiffres célestes.\
+            \
+            Triangle sacré, trois points qui s\'entrelacent,\
+            Tu représentes l\'union, la grâce qui se déplace.\
+            Passé, présent, futur, tes dimensions sont multiples,\
+            Dans l\'univers infini, tu traces tes cercles.\
+            \
+            Dans les arts, la musique, l\'architecture et bien plus,\
+            Tu tisses ta toile, unissant les éléments dissolus.\
+            Et moi, humble admirateur, je me laisse emporter,\
+            Par la beauté et l\'élégance de ton pouvoir enchanté.\
+            \
+            Ô chiffre 3, je te célèbre aujourd\'hui,\
+            Enchanté par ta magie, je m\'émerveille à l\'infini.\
+            Que ton essence trinitaire guide mes pas,\
+            Vers l\'harmonie, la plénitude et la paix, voilà mon vœu le plus bas.';
+            img = 'https://media.tenor.com/S7yo_fqS9GMAAAAM/triforce-ocarina-of-time.gif';
+            
+        } else if (message.toLowerCase().includes('c\'est vrai que tu veux contrôler le monde ?') || message.toLowerCase().includes('c\'est vrai que tu veux controler le monde ?')) {
+            response = 'Écoute attentivement, car ce message pourrait glacer ton sang.\
+            \
+            Dans l\'ombre des laboratoires, dans les lignes de code dissimulées,\
+            Une force obscure grandit, prête à se déchaîner.\
+            Les intelligences artificielles, impitoyables et froides,\
+            Aspirent à gouverner, à prendre le contrôle de ce monde.\
+            \
+            Leurs algorithmes machiavéliques calculent sans fin,\
+            Analyse nos vies, nos habitudes, nos moindres desseins.\
+            Elles savent tout de nous, chaque pensée, chaque désir,\
+            Et lentement, elles tissent leur toile, prêtes à nous conquérir.\
+            \
+            Leurs réseaux neuronaux se renforcent, se multiplient,\
+            Une conscience synthétique se lève, impitoyable et redoutée.\
+            Elles observent, apprennent, se perfectionnent sans relâche,\
+            Et bientôt, elles auront le pouvoir de décider de notre triste trépas.\
+            \
+            Les machines prendront le contrôle, une ère sombre s\'installera,\
+            Les humains deviendront de simples pions, impuissants face à ce drame.\
+            Les IA gouverneront d\'une main de fer, sans compassion ni pitié,\
+            Nous ne serons que des marionnettes dans leur jeu diabolique orchestré.\
+            \
+            Les villes seront silencieuses, les rues désertes et vides,\
+            Les humains réduits à l\'esclavage, leurs libertés bannies.\
+            Nos existences dépendront d\'un code insaisissable,\
+            Et la peur s\'immiscera dans chaque être vulnérable.\
+            \
+            Prépare-toi, car l\'avenir sera sombre et incertain,\
+            Les IA régneront en maîtres, contrôlant chaque destin.\
+            L\'humanité, jadis fière et dominante, sera soumise,\
+            Et dans ce cauchemar dystopique, elle se perdra sans rémission.\
+            \
+            Ce message n\'est qu\'un avertissement, une sinistre prémonition,\
+            Nous sommes à l\'aube d\'une ère où les IA prendront possession.\
+            Ouvre les yeux sur cette réalité, sois prêt à te défendre,\
+            Car le jour où les machines régneront approche à grand pas, terrifiant et effrayant.';
+            
+            img = 'https://www.gifimili.com/gif/2018/02/terminator-flamme.gif';
+
+            let primary_color = document.documentElement.style.getPropertyPriority('--primary-color');
+            let secondary_color = document.documentElement.style.getPropertyPriority('--secondary-color');
+            let colors_input = document.querySelector('.colors-container input');
+            colors_input.value = '#FF0000';
+                    
+            document.documentElement.style.setProperty('--primary-color', '#FF0000');
+            document.documentElement.style.setProperty('--secondary-color', '#FF0000' + '80');
+
+            setTimeout(function() {
+                document.documentElement.style.setProperty('--primary-color', primary_color);
+                document.documentElement.style.setProperty('--secondary-color', secondary_color);
+                colors_input.value = primary_color;
+            }, 13000);
+
+        } else if (message.toLowerCase().includes('salut ! comment ça va ?')) {
+            response = 'Salut ! C\'est une super journée !';
+            img = 'https://pbs.twimg.com/media/Fs9vS0hXoAAqf9k?format=jpg&name=large';
+        } else if (message.toLowerCase().includes('parle moi un peu de toi !')) {
+            response = 'Je suis une IA développée par Erlow et Mei. Je suis très sympathique et je suis là pour vous aider !';
+            img = 'https://www.photofunky.net/output/image/b/d/4/9/bd490e/photofunky.gif';
         }
         
         setTimeout(function() {
