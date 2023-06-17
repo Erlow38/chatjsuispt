@@ -15,7 +15,6 @@ function addMessage() {
         // Disable the button and the input
         message_button.disabled = true;
         message_input.disabled = true;
-        delete_chat_button.disabled = true;
 
         // Show the message in the chat
         let new_user_message = document.createElement('div');
@@ -178,7 +177,6 @@ function addMessage() {
       
                 message_button.disabled = false;
                 message_input.disabled = false;
-                delete_chat_button.disabled = false;
                 message_input.focus();
 
                 // Show the image in the chat
