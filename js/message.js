@@ -15,6 +15,7 @@ function addMessage() {
         // Disable the button and the input
         message_button.disabled = true;
         message_input.disabled = true;
+        delete_chat_button.disabled = true;
 
         // Show the message in the chat
         let new_user_message = document.createElement('div');
@@ -28,6 +29,7 @@ function addMessage() {
 
         // Generate the bot response
         let response = 'Bienvenido a la página de contacto de la empresa. ¿En qué podemos ayudarte?';
+        let img = 'https://i.gifer.com/3ZCr.gif';
             
         setTimeout(function() {
             // Show the bot response in the chat
@@ -43,13 +45,22 @@ function addMessage() {
                 chat_container.scrollTop = chat_container.scrollHeight;
                 i++;
               } else {
+                // After the response is shown
                 clearInterval(timer);
       
                 message_button.disabled = false;
                 message_input.disabled = false;
+                delete_chat_button.disabled = false;
                 message_input.focus();
+
+                // Show the image in the chat
+                if (img) {
+                    new_bot_message.innerHTML += '<img src="' + img + '" alt="Image" width="1000">';
+                    chat_container.scrollTop = chat_container.scrollHeight;
+                }
               }
-            }, 5); // Ajustez la vitesse de la frappe ici (en millisecondes)
+            }, 5); // Adjust the speed of the response here (ms)
+
         }, 1000);
     }
 }
