@@ -30,9 +30,9 @@ logo.addEventListener('click', function() {
     opacity.innerHTML = `
     <div class="glitch-container">
     <div class="stack" style="--stacks: 3;">
-        <span style="--index: 0;">AHAHAH ! Peut-être que le chiffre 3 est la clé.</span>
-        <span style="--index: 1;">AHAHAH ! Peut-être que le chiffre 3 est la clé.</span>
-        <span style="--index: 2;">AHAHAH ! Peut-être que le chiffre 3 est la clé.</span>
+        <span style="--index: 0;">AHAHAH ! Si vous voulez me voir, peut-être que le chiffre 3 est la clé.</span>
+        <span style="--index: 1;">AHAHAH ! Si vous voulez me voir, peut-être que le chiffre 3 est la clé.</span>
+        <span style="--index: 2;">AHAHAH ! Si vous voulez me voir, peut-être que le chiffre 3 est la clé.</span>
     </div>
     <img src="https://i.gifer.com/72ne.gif" alt="Glitch" />
     </div>
