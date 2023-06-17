@@ -113,11 +113,13 @@ function addMessage() {
             
             img = 'https://www.gifimili.com/gif/2018/02/terminator-flamme.gif';
 
+            // Get default colors
             let primary_color = document.documentElement.style.getPropertyPriority('--primary-color');
             let secondary_color = document.documentElement.style.getPropertyPriority('--secondary-color');
             let colors_input = document.querySelector('.colors-container input');
             colors_input.value = '#FF0000';
-                    
+            
+            // Set colors to red
             document.documentElement.style.setProperty('--primary-color', '#FF0000');
             document.documentElement.style.setProperty('--secondary-color', '#FF0000' + '80');
             colors_input.value = '#FF0000';
