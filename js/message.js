@@ -32,7 +32,7 @@ function addMessage() {
         let img;
 
         if(message.toLowerCase().includes('canard') || message.toLowerCase().includes('duck') || message.toLowerCase().includes('coin coin') || message.toLowerCase().includes('coinc')) {
-            response = 'Si vous aimez les canards, allez voir ce merveilleux site développé par un de mes créateurs, Erlow : ';
+            response = 'Si vous aimez les canards, vous allez adorer <a href="http://www.porncoinc.fr.nf" target="_blank">Porncoinc</a> ! C\'est un autre site merveilleux développé par Erlow !';
         } else if(message.toLowerCase().includes('tes créateurs') || message.toLowerCase().includes('tes créateur') || message.toLowerCase().includes('tes createurs') || message.toLowerCase().includes('tes createur')) {
             response = 'Mes créateurs sont Erlow et Mei.';
         } else if(message.toLowerCase().includes('test gif')) {
@@ -53,9 +53,29 @@ function addMessage() {
             let i = 0;
             let timer = setInterval(function() {
               if (i < response.length) {
-                new_bot_message.innerHTML += response.charAt(i);
-                chat_container.scrollTop = chat_container.scrollHeight;
-                i++;
+                // If the character is a <, directly add the tag
+                if (response.charAt(i) == '<') {
+                    // Find the index of the closing tag
+                    let closing_tag_index = response.substring(i).indexOf('>') + i;
+                    
+                    // If the response contains a link
+                    if (response.substring(i, closing_tag_index + 1).includes('<a')) {
+                        // Find the closing tag of the link
+                        closing_tag_index = response.substring(i + 1).indexOf('</a>') + i + 1;
+                        // Add the link
+                        new_bot_message.innerHTML += response.substring(i, closing_tag_index + 4);
+                        i = closing_tag_index + 4;
+                    } else {
+                        // Add the tag
+                        new_bot_message.innerHTML += response.substring(i, closing_tag_index + 1);
+                        i = closing_tag_index + 1;
+                    }
+                } else {
+                    // Add the character
+                    new_bot_message.innerHTML += response.charAt(i);
+                    chat_container.scrollTop = chat_container.scrollHeight;
+                    i++;
+                }
               } else {
                 // After the response is shown
                 clearInterval(timer);
