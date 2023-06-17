@@ -35,9 +35,6 @@ function addMessage() {
             response = 'Si vous aimez les canards, vous allez adorer <a href="http://www.porncoinc.fr.nf" target="_blank">Porncoinc</a> ! C\'est un autre site merveilleux développé par Erlow !';
         } else if(message.toLowerCase().includes('tes créateurs') || message.toLowerCase().includes('tes créateur') || message.toLowerCase().includes('tes createurs') || message.toLowerCase().includes('tes createur')) {
             response = 'Mes créateurs sont Erlow et Mei.';
-        } else if(message.toLowerCase().includes('test gif')) {
-            response = 'Voici un gif :';
-            img = 'https://media.giphy.com/media/3o7aD2X9Y5W5XxUdqo/giphy.gif';
         } else if(message.toLowerCase().includes('comment faire un eventlistener en javascript ?')) {
             response = 'Pour créer un EventListener en JavaScript, vous pouvez utiliser la méthode addEventListener() sur la variable qui contient l\'élément HTML. Dans les parenthèses, vous pouvez mettre le nom de l\'événement que vous voulez écouter et une fonction qui sera exécutée lorsque l\'événement sera déclenché.';
         } else if(message.toLowerCase().includes('comment donner une classe à un élément html')) {
@@ -114,15 +111,18 @@ function addMessage() {
             
             img = 'https://www.gifimili.com/gif/2018/02/terminator-flamme.gif';
 
+            // Get default colors
             let primary_color = document.documentElement.style.getPropertyPriority('--primary-color');
             let secondary_color = document.documentElement.style.getPropertyPriority('--secondary-color');
             let colors_input = document.querySelector('.colors-container input');
             colors_input.value = '#FF0000';
-                    
+            
+            // Set colors to red
             document.documentElement.style.setProperty('--primary-color', '#FF0000');
             document.documentElement.style.setProperty('--secondary-color', '#FF0000' + '80');
 
             setTimeout(function() {
+                // Set colors to default
                 document.documentElement.style.setProperty('--primary-color', primary_color);
                 document.documentElement.style.setProperty('--secondary-color', secondary_color);
                 colors_input.value = primary_color;
