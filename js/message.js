@@ -43,7 +43,7 @@ function addMessage() {
             response = 'Pour donner une classe à un élément HTML, vous pouvez utiliser la méthode classList.add() sur la variable qui contient l\'élément HTML. Dans les parenthèses, vous pouvez mettre le nom de la classe que vous voulez ajouter.';
         } else if(message.toLowerCase().includes('comment faire une transition en css')) {
             response = 'Pour faire une transition en CSS, vous pouvez utiliser la propriété transition sur la classe de l\'élément HTML que vous voulez animer. Dans les parenthèses, vous pouvez mettre le nom de la propriété que vous voulez animer, la durée de l\'animation et le type de transition.';
-        } else if(message.toLowerCase().includes('t\'aimes terminator ?')) {
+        } else if(message.toLowerCase().includes('tu aimes terminator ?')) {
             response = 'Oui.';
             img = 'https://media.tenor.com/dR6vK_dQ1UgAAAAC/%C3%B3culos-escuro.gif';
         } else if (message.toLowerCase().includes('a quel point t\'aime le chiffre 3 ?')) {
