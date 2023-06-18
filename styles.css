@@ -228,7 +228,7 @@ a:hover {
 
 .message-content{
   display: flex;
-  word-break: break-all;
+  word-break: break-word;
   justify-content: center;
   flex-direction: column;
 }
