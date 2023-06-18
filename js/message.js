@@ -50,15 +50,15 @@ function addMessage() {
                 [pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + ' ' + adjectifs[Math.floor(Math.random() * adjectifs.length)] + '.'],                                               // Sujet + Verbe + Complément circonstanciel de lieu
                 [pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + ' ' + adjectifs[Math.floor(Math.random() * adjectifs.length)] + '.'],                                               // Sujet + Verbe + Complément circonstanciel de manière
                 [pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + ' ' + adjectifs[Math.floor(Math.random() * adjectifs.length)] + '.'],                                                // Sujet + Verbe + Complément d'attribution
-                [pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + ' ' + noms[Math.floor(Math.random() * noms.length)] + '.'],                                                           // Sujet + Verbe + Complément du nom
-                [pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + '.'],                                                                                                                // Phrase interrogative avec inversion du sujet et du verbe
-                ['Est-ce que' + ' ' + pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + '.']                                                                                             // Phrase interrogative avec est-ce que
+                [pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + ' ' + noms[Math.floor(Math.random() * noms.length)] + ' !'],                                                           // Sujet + Verbe + Complément du nom
+                [pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + ' ?'],                                                                                                                // Phrase interrogative avec inversion du sujet et du verbe
+                ['Est-ce que' + ' ' + pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + ' ?']                                                                                             // Phrase interrogative avec est-ce que
             ];
             
             // Generate a random sentence from the sentence structures by taking random words in the dictionaries taking into account that if it is an adjective we take in the dictionary of adjectives, etc.
             let sentence = sentenceStructure[Math.floor(Math.random() * sentenceStructure.length)];
             //mette la première lettre en majuscule
-            sentence[0] = sentence[0].charAt(0).toUpperCase() + sentence[0].slice(1);
+            sentence[0] = sentence[0].charAt(0).toUpperCase() + sentence[0].slice(1).toLowerCase();
 
             response += sentence[Math.floor(Math.random() * sentence.length)] + ' ';
         }
