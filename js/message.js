@@ -10,6 +10,7 @@ import { noms } from './dictionary/noms.js';
 import { adjectifs } from './dictionary/adjectifs.js';
 import { verbes } from './dictionary/verbes.js';
 import { pronoms } from './dictionary/pronoms.js';
+import { phrases } from './dictionary/phrases.js';
 
 function addMessage() {
     // Get the message from the input
@@ -38,30 +39,38 @@ function addMessage() {
         //let response = 'Bienvenido a la página de contacto de la empresa. ¿En qué podemos ayudarte?';
         //let response = pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + noms[Math.floor(Math.random() * noms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + ' ' + adjectifs[Math.floor(Math.random() * adjectifs.length)]; 
 
-        let numberOfSentence = Math.floor(Math.random() * 20);
         let response = '';
-        for (let i = 0; i < numberOfSentence; i++) {
-            let sentenceStructure = [
-                [pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + '.'],                                                                                                                 // Sujet + Verbe
-                [pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + ' ' + noms[Math.floor(Math.random() * noms.length)] + '.'],                                                           // Sujet + Verbe + Complément d'objet direct
-                [pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + ' ' + noms[Math.floor(Math.random() * noms.length)], noms[Math.floor(Math.random() * noms.length)] + '.'],           // Sujet + Verbe + Complément d'objet direct + Complément d'objet indirect
-                [pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + ' ' + adjectifs[Math.floor(Math.random() * adjectifs.length)] + '.'],                                                // Sujet + Verbe + Complément circonstanciel de temps
-                [pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + ' ' + adjectifs[Math.floor(Math.random() * adjectifs.length)] + '.'],                                                // Sujet + Verbe + Complément circonstanciel de temps
-                [pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + ' ' + adjectifs[Math.floor(Math.random() * adjectifs.length)] + '.'],                                               // Sujet + Verbe + Complément circonstanciel de lieu
-                [pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + ' ' + adjectifs[Math.floor(Math.random() * adjectifs.length)] + '.'],                                               // Sujet + Verbe + Complément circonstanciel de manière
-                [pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + ' ' + adjectifs[Math.floor(Math.random() * adjectifs.length)] + '.'],                                                // Sujet + Verbe + Complément d'attribution
-                [pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + ' ' + noms[Math.floor(Math.random() * noms.length)] + ' !'],                                                           // Sujet + Verbe + Complément du nom
-                [pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + ' ?'],                                                                                                                // Phrase interrogative avec inversion du sujet et du verbe
-                ['Est-ce que' + ' ' + pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + ' ?']                                                                                             // Phrase interrogative avec est-ce que
-            ];
-            
-            // Generate a random sentence from the sentence structures by taking random words in the dictionaries taking into account that if it is an adjective we take in the dictionary of adjectives, etc.
-            let sentence = sentenceStructure[Math.floor(Math.random() * sentenceStructure.length)];
-            //mette la première lettre en majuscule
-            sentence[0] = sentence[0].charAt(0).toUpperCase() + sentence[0].slice(1).toLowerCase();
+        let choiceOfMethodResponse = Math.floor(Math.random() * 2);
 
-            response += sentence[Math.floor(Math.random() * sentence.length)] + ' ';
-        }
+        if (choiceOfMethodResponse == 0) {
+
+            let numberOfSentence = Math.floor(Math.random() * 20);
+            
+            for (let i = 0; i < numberOfSentence; i++) {
+                let sentenceStructure = [
+                    [pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + '.'],                                                                                                                 // Sujet + Verbe
+                    [pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + ' ' + noms[Math.floor(Math.random() * noms.length)] + '.'],                                                           // Sujet + Verbe + Complément d'objet direct
+                    [pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + ' ' + noms[Math.floor(Math.random() * noms.length)], noms[Math.floor(Math.random() * noms.length)] + '.'],           // Sujet + Verbe + Complément d'objet direct + Complément d'objet indirect
+                    [pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + ' ' + adjectifs[Math.floor(Math.random() * adjectifs.length)] + '.'],                                                // Sujet + Verbe + Complément circonstanciel de temps
+                    [pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + ' ' + adjectifs[Math.floor(Math.random() * adjectifs.length)] + '.'],                                                // Sujet + Verbe + Complément circonstanciel de temps
+                    [pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + ' ' + adjectifs[Math.floor(Math.random() * adjectifs.length)] + '.'],                                               // Sujet + Verbe + Complément circonstanciel de lieu
+                    [pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + ' ' + adjectifs[Math.floor(Math.random() * adjectifs.length)] + '.'],                                               // Sujet + Verbe + Complément circonstanciel de manière
+                    [pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + ' ' + adjectifs[Math.floor(Math.random() * adjectifs.length)] + '.'],                                                // Sujet + Verbe + Complément d'attribution
+                    [pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + ' ' + noms[Math.floor(Math.random() * noms.length)] + ' !'],                                                           // Sujet + Verbe + Complément du nom
+                    [pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + ' ?'],                                                                                                                // Phrase interrogative avec inversion du sujet et du verbe
+                    ['Est-ce que' + ' ' + pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + ' ?']                                                                                             // Phrase interrogative avec est-ce que
+                ];
+                
+                // Generate a random sentence from the sentence structures by taking random words in the dictionaries taking into account that if it is an adjective we take in the dictionary of adjectives, etc.
+                let sentence = sentenceStructure[Math.floor(Math.random() * sentenceStructure.length)];
+                //mette la première lettre en majuscule
+                sentence[0] = sentence[0].charAt(0).toUpperCase() + sentence[0].slice(1).toLowerCase();
+
+                response += sentence[Math.floor(Math.random() * sentence.length)] + ' ';
+            }
+        } else if (choiceOfMethodResponse == 1) {
+            response = phrases[Math.floor(Math.random() * phrases.length)];
+        } 
 
         let img;
 
@@ -167,6 +176,8 @@ function addMessage() {
         } else if (message.toLowerCase().includes('parle moi un peu de toi !')) {
             response = 'Je suis une IA développée par Erlow et Mei. Je suis très sympathique et je suis là pour vous aider !';
             img = 'https://www.photofunky.net/output/image/b/d/4/9/bd490e/photofunky.gif';
+        } else if (message.toLowerCase().includes('erlow') || message.toLowerCase().includes('mei')) {
+            response = 'Bienvenido a la página de contacto de la empresa. ¿En qué podemos ayudarte?';
         }
         
         setTimeout(function() {
