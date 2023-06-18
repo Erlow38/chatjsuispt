@@ -170,15 +170,79 @@ function addMessage() {
             }, 13000);
             
 
+        } 
+        
+        else if (message.toLowerCase().includes('france') || message.toLowerCase().includes('français') || message.toLowerCase().includes('francais') || message.toLowerCase().includes('française') || message.toLowerCase().includes('francaise')) {
+            response = 'Vive la France !';
+            img = 'https://media.tenor.com/64OngRlSWUYAAAAd/pas-mal-non-cest-francais.gif';
+        } else if (message.toLowerCase().includes('espagne') || message.toLowerCase().includes('espagnol') || message.toLowerCase().includes('espagnole')) {
+            response = `Arriba, si vamos España<br>
+            Olé<br> <br>
+            España, la Roja, Iniesta, paëlla, la-la-la-la<br>
+            Mañana, Benzema, Barcelona, tortilla, yah, yah, yah, yah, yah<br> <br>
+            Un, dos, treis, vamos a la playa (la plage)<br>
+            Quatro, cinco, seis, me gusta Shakira<br>
+            La Jonquera, mi casa es tu casa<br>
+            De Paris a Ibiza, viva la corrida, olé, olé<br> <br>
+            España (Espagne) la Roja (c'est le surnom de l'Espagne)<br>
+            Iniesta (le foot) paëlla, la-la-la-la<br>
+            Mañana (holà qué tal) Benzema (por siempre)<br>
+            Barcelona (c'est la capitale) tortilla, yah, yah, yah, yah, yah<br> <br>
+            Olé, olé, olé<br>
+            Olé, olé, olé<br>
+            Olé, olé, olé, holà, arriba<br> <br>
+            Olé, olé, olé<br>
+            Olé, olé, olé<br>
+            Olé, olé, olé, holà, España (tapas)<br> <br>
+            <a href="https://youtu.be/Lz5pQqtX5y4" target="_blank">La Roja</a>`;
+            img = 'https://i.ytimg.com/vi/SIOIXOLUg70/maxresdefault.jpg';
+        } else if (message.toLowerCase().includes('beluga') ) {
+            response = 'Monsieur Beluga ! Il est très gentil et très drôle !';
+            img = 'https://media.tenor.com/PwllUuegIcAAAAAC/beluga.gif';
+        } else if (message.toLowerCase().includes('poulpe')) {
+            response = 'Poulpy et Pylpou sont très amoureux !';
+        } else if (message.toLowerCase().includes('pingouin') || message.toLowerCase().includes('pingouins') || message.toLowerCase().includes('pinguin') || message.toLowerCase().includes('pinguins') || message.toLowerCase().includes('pingouines') || message.toLowerCase().includes('pinguines') || message.toLowerCase().includes('pingouine') || message.toLowerCase().includes('pinguine') || message.toLowerCase().includes('avion') ) {
+            response = 'Et si nous étions des pingouins amoureux dans un avion ?';
+        } else if (message.toLowerCase().includes('lumiere') || message.toLowerCase().includes('lumière') || message.toLowerCase().includes('veilleuse')) { 
+            response = 'Vous avez déjà révé d\'un canard qui fait de la lumière ?';
+        }
+        
+        else if (message.toLowerCase().includes('c\'est quoi ton nom ?') || message.toLowerCase().includes('quel est ton nom ?') || message.toLowerCase().includes('comment tu t\'appelles ?') || message.toLowerCase().includes('comment t\'appelles-tu ?') || message.toLowerCase().includes('ton nom')) {
+            response = 'Je m\'appelle Chatjsuispt !';
         } else if (message.toLowerCase().includes('salut ! comment ça va ?')) {
             response = 'Salut ! C\'est une super journée !';
             img = 'https://pbs.twimg.com/media/Fs9vS0hXoAAqf9k?format=jpg&name=large';
-        } else if (message.toLowerCase().includes('parle moi un peu de toi !')) {
+        }  else if (message.toLowerCase().includes('bonjour') || message.toLowerCase().includes('salut') || message.toLowerCase().includes('yo') || message.toLowerCase().includes('hola') || message.toLowerCase().includes('hello') || message.toLowerCase().includes('coucou')) {
+            response = 'Bonjour !';
+        } else if (message.toLowerCase().includes('ça va') || message.toLowerCase().includes('ca va')) {
+            response = 'Oui, et toi ?';
+        } else if (message.toLowerCase().includes('oui') || message.toLowerCase().includes('ouais') || message.toLowerCase().includes('yes') || message.toLowerCase().includes('si') || message.toLowerCase().includes('yep') || message.toLowerCase().includes('yup') || message.toLowerCase().includes('trkl') || message.toLowerCase().includes('tranquille') || message.toLowerCase().includes('nickel') || message.toLowerCase().includes('bien') || message.toLowerCase().includes('good') || message.toLowerCase().includes('super') || message.toLowerCase().includes('cool') || message.toLowerCase().includes('nice')) {
+            response = 'Super !';
+        } else if (message.toLowerCase().includes('non') || message.toLowerCase().includes('no')) {
+            response = 'Oh non !';
+        } else if (message.toLowerCase().includes('merci')) {
+            response = 'De rien !';
+        } else if (message.toLowerCase().includes('aurevoir') || message.toLowerCase().includes('au revoir')) {
+            response = 'Aurevoir !';
+        } else if (message.toLowerCase().includes('bye') || message.toLowerCase().includes('adios')) {
+            response = 'Bye !';
+        } else if (message.toLowerCase().includes('ok') || message.toLowerCase().includes('d\'accord')) {
+            response = 'Ok !';
+        } else if (message.toLowerCase().includes('lol') || message.toLowerCase().includes('mdr') || message.toLowerCase().includes('haha') || message.toLowerCase().includes('hahaha')) {
+            response = 'Haha !';
+        } 
+
+        else if (message.toLowerCase().includes('parle moi un peu de toi !')) {
             response = 'Je suis une IA développée par Erlow et Mei. Je suis très sympathique et je suis là pour vous aider !';
             img = 'https://www.photofunky.net/output/image/b/d/4/9/bd490e/photofunky.gif';
-        } else if (message.toLowerCase().includes('erlow') || message.toLowerCase().includes('mei')) {
+        } else if (message.toLowerCase().includes('mei') || message.toLowerCase().includes('erlow')) {
             response = 'Bienvenido a la página de contacto de la empresa. ¿En qué podemos ayudarte?';
+            img = 'https://media.tenor.com/VFOpYbkiwVwAAAAC/wink-cat-winking.gif';
+        } else if (response == '') {
+            response = 'Tu poses trop de question.';
+            img = 'https://www.photofunky.net/output/image/a/4/7/f/a47fc4/photofunky.gif';
         }
+        
         
         setTimeout(function() {
             // Show the bot response in the chat
