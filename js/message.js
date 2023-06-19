@@ -218,7 +218,20 @@ function addMessage() {
         } else if (message.toLowerCase().includes('lumiere') || message.toLowerCase().includes('lumière') || message.toLowerCase().includes('veilleuse')) { 
             response = 'Vous avez déjà révé d\'un canard qui fait de la lumière ?';
         } else if (message.toLowerCase().includes('quoi')) {
-            response = 'Feur !';
+            let number = Math.floor(Math.random() * 2);
+            if (number === 0) {
+                response = 'Feur !';
+            }
+            else {
+                response = 'Quoicoubeh !';
+            }
+        } else if (message.toLowerCase().includes('hein')) {
+            response = 'Apanyan !';
+        } else if  (message.toLowerCase().includes('bon')) {
+            response = 'T\'as les cramptés ?';
+        } else if (message.toLowerCase().includes('bebou') || message.toLowerCase().includes('bébou') || message.toLowerCase().includes('boubou') ) {
+            response = 'Tu es tilté boubou ! Tu as besoin de bol !';
+            img = 'https://media.tenor.com/ZgNsJsnoWGUAAAAd/sardoche-tu-es-tilt%C3%A9-boubou.gif';
         }
         
         else if (message.toLowerCase().includes('c\'est quoi ton nom ?') || message.toLowerCase().includes('quel est ton nom ?') || message.toLowerCase().includes('comment tu t\'appelles ?') || message.toLowerCase().includes('comment t\'appelles-tu ?') || message.toLowerCase().includes('ton nom')) {
