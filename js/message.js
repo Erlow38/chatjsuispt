@@ -169,7 +169,19 @@ function addMessage() {
                 colors_input.value = color;
             }, 13000);
             
+        } 
 
+        else if (message.toLowerCase().includes('combien')) {
+            let number = Math.floor(Math.random() * 1000);
+            response = `Je dirais ${number} !`;
+        } else if (message.toLowerCase().includes('est-ce que') || message.toLowerCase().includes('est ce que') || message.toLowerCase().includes('est-ce-que') || message.toLowerCase().includes('est-ce qu\'') || message.toLowerCase().includes('est ce qu\'') || message.toLowerCase().includes('est-ce-qu\'') || message.toLowerCase().includes('est ce qu\'') || message.toLowerCase().includes('t\'es sur ') || message.toLowerCase().includes('t\'es sûr ') || message.toLowerCase().includes('t\'es sur') || message.toLowerCase().includes('t\'es sûr') || message.toLowerCase().includes('tu es sur') || message.toLowerCase().includes('tu es sûr ') || message.toLowerCase().includes('tu es') || message.toLowerCase().includes('t\'es') || message.toLowerCase().includes('sur ?') || message.toLowerCase().includes('sûr ?') || message.toLowerCase().includes('sur?') || message.toLowerCase().includes('sûr?')) {
+            let number = Math.floor(Math.random() * 2);
+            if (number === 0) {
+                response = 'Oui.';
+            }
+            else {
+                response = 'Non.';
+            }
         } 
         
         else if (message.toLowerCase().includes('france') || message.toLowerCase().includes('français') || message.toLowerCase().includes('francais') || message.toLowerCase().includes('française') || message.toLowerCase().includes('francaise')) {
@@ -205,6 +217,8 @@ function addMessage() {
             response = 'Et si nous étions des pingouins amoureux dans un avion ?';
         } else if (message.toLowerCase().includes('lumiere') || message.toLowerCase().includes('lumière') || message.toLowerCase().includes('veilleuse')) { 
             response = 'Vous avez déjà révé d\'un canard qui fait de la lumière ?';
+        } else if (message.toLowerCase().includes('quoi')) {
+            response = 'Feur !';
         }
         
         else if (message.toLowerCase().includes('c\'est quoi ton nom ?') || message.toLowerCase().includes('quel est ton nom ?') || message.toLowerCase().includes('comment tu t\'appelles ?') || message.toLowerCase().includes('comment t\'appelles-tu ?') || message.toLowerCase().includes('ton nom')) {
@@ -212,7 +226,7 @@ function addMessage() {
         } else if (message.toLowerCase().includes('salut ! comment ça va ?')) {
             response = 'Salut ! C\'est une super journée !';
             img = 'https://pbs.twimg.com/media/Fs9vS0hXoAAqf9k?format=jpg&name=large';
-        }  else if (message.toLowerCase().includes('bonjour') || message.toLowerCase().includes('salut') || message.toLowerCase().includes('yo') || message.toLowerCase().includes('hola') || message.toLowerCase().includes('hello') || message.toLowerCase().includes('coucou')) {
+        }  else if (message.toLowerCase().includes('bonjour') || message.toLowerCase().includes('salut') || message.toLowerCase().includes('yo') || message.toLowerCase().includes('hola') || message.toLowerCase().includes('hello') || message.toLowerCase().includes('coucou')|| message.toLowerCase().includes('cc')) {
             response = 'Bonjour !';
         } else if (message.toLowerCase().includes('ça va') || message.toLowerCase().includes('ca va')) {
             response = 'Oui, et toi ?';
