@@ -20,7 +20,6 @@ function addMessage() {
         suggestions_container.style.display = 'none';
 
         // Disable the button and the input
-        
         isWriting = true;
         message_button.disabled = true;
         message_input.disabled = true;
@@ -43,10 +42,11 @@ function addMessage() {
         let choiceOfMethodResponse = Math.floor(Math.random() * 2);
 
         if (choiceOfMethodResponse == 0) {
-
+            // Set a random number of sentences
             let numberOfSentence = Math.floor(Math.random() * 20);
             
             for (let i = 0; i < numberOfSentence; i++) {
+                // Define the sentence structures
                 let sentenceStructure = [
                     [pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + '.'],                                                                                                                 // Sujet + Verbe
                     [pronoms[Math.floor(Math.random() * pronoms.length)] + ' ' + verbes[Math.floor(Math.random() * verbes.length)] + ' ' + noms[Math.floor(Math.random() * noms.length)] + '.'],                                                           // Sujet + Verbe + Complément d'objet direct
@@ -63,17 +63,18 @@ function addMessage() {
                 
                 // Generate a random sentence from the sentence structures by taking random words in the dictionaries taking into account that if it is an adjective we take in the dictionary of adjectives, etc.
                 let sentence = sentenceStructure[Math.floor(Math.random() * sentenceStructure.length)];
-                //mette la première lettre en majuscule
+                // Capitalize the first letter of the sentence
                 sentence[0] = sentence[0].charAt(0).toUpperCase() + sentence[0].slice(1).toLowerCase();
 
                 response += sentence[Math.floor(Math.random() * sentence.length)] + ' ';
             }
         } else if (choiceOfMethodResponse == 1) {
+            // Select a random phrase from the phrases dictionary
             response = phrases[Math.floor(Math.random() * phrases.length)];
         } 
 
         let img;
-
+        
         if(message.toLowerCase().includes('canard') || message.toLowerCase().includes('duck') || message.toLowerCase().includes('coin coin') || message.toLowerCase().includes('coinc')) {
             response = 'Si vous aimez les canards, vous allez adorer <a href="http://www.porncoinc.fr.nf" target="_blank">Porncoinc</a> ! C\'est un autre site merveilleux développé par Erlow !';
         } else if(message.toLowerCase().includes('tes créateurs') || message.toLowerCase().includes('tes créateur') || message.toLowerCase().includes('tes createurs') || message.toLowerCase().includes('tes createur')) {
